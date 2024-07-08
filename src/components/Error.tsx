@@ -6,7 +6,7 @@ interface ErrorState {
   throwError: boolean;
 }
 
-class ErrorFake extends React.Component<ErrorState> {
+class ErrorFake extends React.Component<unknown, ErrorState> {
   state = {
     throwError: false,
   };
