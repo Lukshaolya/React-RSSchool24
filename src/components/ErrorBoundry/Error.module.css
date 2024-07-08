@@ -1,0 +1,33 @@
+.error_message {
+  color: #50984b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 200px;
+  font-size: 30px;
+}
+
+.search__btn {
+  height: 40px;
+  width: 200px;
+  color: aquamarine;
+  background: black;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin: 0 10px;
+  box-sizing: content-box;
+  border: solid 3px aquamarine;
+  font-size: 22px;
+}
+
+.search__btn:hover {
+  color: black;
+  background: aquamarine;
+}
+
+.error__btn {
+  display: flex;
+  margin: 50px 50px;
+}
