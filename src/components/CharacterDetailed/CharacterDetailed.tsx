@@ -54,7 +54,7 @@ const CharacterDetailed = () => {
   if (!character) return <div>No character found</div>;
   if (!isOpen) return <></>;
   return (
-    <div className={styles.detailed_block} onClick={handleClickOnDetailsBlock}>
+    <div className={styles.detailed_block}>
       <h3>{character.name}</h3>
       <h4>
         {character.status} / {character.species}
@@ -80,6 +80,7 @@ const CharacterDetailed = () => {
       <p>
         <strong>Location:</strong> {character.location.name}
       </p>
+      <button onClick={handleClickOnDetailsBlock}>Close</button>
     </div>
   );
 };

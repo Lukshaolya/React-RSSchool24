@@ -20,7 +20,22 @@
   border-radius: 50%;
 }
 
-
 .filter_img {
   filter: grayscale(1);
+}
+
+.detailed_block button {
+  height: 30px;
+  color: #97ce4c;
+  background: black;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin: 0 10px;
+  box-sizing: content-box;
+  border: solid 3px #97ce4c;
+}
+
+.detailed_block button:hover {
+  color: black;
+  background: #97ce4c;
 }
