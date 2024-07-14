@@ -17,6 +17,6 @@ module.exports = {
     ],
     'react-compiler/react-compiler': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
-    'prettier/prettier': ['error', { endOfLine: 'lf' }],
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
   },
 };

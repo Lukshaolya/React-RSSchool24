@@ -1,18 +1,39 @@
 import React from 'react';
-import './App.css';
-import Search from './components/SearchBar/SearchBar';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './containers/Layout';
 import ErrorBoundary from './components/ErrorBoundry/ErrorBoundry';
+import MainPage from './containers/MainPage/MainPage';
+import CharacterDetailed from './components/CharacterDetailed/CharacterDetailed';
+import NotFoundPage from './containers/NotFoundPage/NotFoundPage';
+import './App.css';
 
-const apiUrl = 'https://rickandmortyapi.com/api/character/';
+const router = createBrowserRouter([
+  {
+    path: 'React-RSSchool24/',
+    element: (
+      <Layout>
+        <MainPage />
+      </Layout>
+    ),
+    children: [
+      {
+        path: '',
+        element: <CharacterDetailed />,
+      },
+    ],
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
+  },
+]);
 
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
-        <ErrorBoundary>
-          <Search apiUrl={apiUrl} />
-        </ErrorBoundary>
-      </div>
+      <ErrorBoundary>
+        <RouterProvider router={router} />
+      </ErrorBoundary>
     );
   }
 }

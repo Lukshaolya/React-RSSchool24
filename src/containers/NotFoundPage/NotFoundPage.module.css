@@ -1,0 +1,42 @@
+.img {
+  background: url(https://i.pinimg.com/564x/ca/f8/9e/caf89ec7174e6533afd8ee7b5acd8a7c.jpg);
+}
+
+.notfound_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.notfound_block h3 {
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  width: 200px;
+  margin: 100px 0;
+  padding-top: 30px;
+}
+
+.notfound_block h4 {
+  color: #e8ea79;
+  font-size: 25px;
+}
+
+.notfound_block button {
+  height: 30px;
+  color: #97ce4c;
+  background: black;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin: 0 10px;
+  box-sizing: content-box;
+  border: solid 3px #97ce4c;
+}
+
+button:hover {
+  color: black;
+  background: #97ce4c;
+}

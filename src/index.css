@@ -4,6 +4,13 @@ html {
 
 body {
   background-image: url(https://i.redd.it/lwwt86ci5anz.jpg);
+  background-color: black;
   background-size: cover;
   background-position: center;
+  height: 100vh;
+}
+
+
+a {
+  text-decoration: none;
 }
