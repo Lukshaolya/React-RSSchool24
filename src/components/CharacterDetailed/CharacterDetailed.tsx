@@ -1,7 +1,8 @@
 import { BASE_URL } from '../../constants';
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { CharactaeDetailData } from '../../types';
+import { useOutletContext } from 'react-router-dom';
+import { CharactaeDetailData, ContextType } from '../../types';
 import loader from './../../assets/loader.png';
 import styles from './CharacterDetailed.module.css';
 
@@ -11,6 +12,8 @@ const CharacterDetailed = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { isOpenonMainPage, setIsOpenonMainPage } =
+    useOutletContext<ContextType>();
 
   const queryParam = new URLSearchParams(location.search).get('details');
   const urlToFetch = `${BASE_URL}${queryParam}`;
@@ -36,23 +39,22 @@ const CharacterDetailed = () => {
   }, [urlToFetch, queryParam]);
 
   const handleClickOnDetailsBlock = () => {
-    console.log('click');
     setIsOpen(false);
+    setIsOpenonMainPage(null);
     const searchParams = new URLSearchParams(location.search);
-    console.log(searchParams);
     searchParams.delete('details');
     navigate(`${location.pathname}?${searchParams.toString()}`);
   };
 
   if (loading)
     return (
-      <div>
+      <div className={styles.loader}>
         <img src={loader} alt="loader" />
       </div>
     );
 
   if (!character) return <div>No character found</div>;
-  if (!isOpen) return <></>;
+  if (!isOpen || isOpenonMainPage == null) return <></>;
   return (
     <div className={styles.detailed_block}>
       <h3>{character.name}</h3>

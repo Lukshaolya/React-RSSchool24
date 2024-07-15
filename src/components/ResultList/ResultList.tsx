@@ -23,7 +23,10 @@ const ResultList = ({
         <div
           key={index}
           className={styles.personal_info}
-          onClick={() => onItemClick(result.id)}
+          onClick={(e) => {
+            e.stopPropagation();
+            onItemClick(result.id);
+          }}
         >
           <h2>{result.name}</h2>
           <ul>

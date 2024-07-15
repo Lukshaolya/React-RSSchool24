@@ -18,10 +18,13 @@ const MainPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [pagesCount, setPagesCount] = useState(1);
+  const [isOpenonMainPage, setIsOpenonMainPage] = useState<number | null>(null);
 
-  const queryParam = new URLSearchParams(window.location.search).get('page');
-  const navigate = useNavigate();
   const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const queryParam = searchParams.get('page');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const page = queryParam ? parseInt(queryParam, 10) : 1;
@@ -58,6 +61,7 @@ const MainPage = () => {
       setSearchResults(dataList.results);
       setNextPage(dataList.next);
       setPrevPage(dataList.previous);
+      setPagesCount(dataList.pages);
     } else {
       setError(true);
       setSearchResults([]);
@@ -69,13 +73,23 @@ const MainPage = () => {
     setSearchValue(value);
     saveToLocalStorage();
     fetchData(`${BASE_URL}?name=${value}`);
+    searchParams.set('search', value.toString());
+    navigate(`${location.pathname}?${searchParams.toString()}`);
   };
 
   const handleOpenDetailedPage = (id: number) => {
-    const searchParams = new URLSearchParams(location.search);
+    setIsOpenonMainPage(id);
     searchParams.set('details', id.toString());
     navigate(`${location.pathname}?${searchParams.toString()}`);
   };
+
+  const handleCloseDetailsBlock = () => {
+    if (isOpenonMainPage !== null) {
+      setIsOpenonMainPage(null);
+    }
+  };
+
+  const contextValue = { isOpenonMainPage, setIsOpenonMainPage };
 
   return (
     <div>
@@ -89,19 +103,20 @@ const MainPage = () => {
             prevPage={prevPage}
             nextPage={nextPage}
             currentPage={currentPage}
+            pagesCount={pagesCount}
             fetchData={fetchData}
           />
         </div>
         {isLoading && <p>Loading...</p>}
         {error && <p>Error loading data</p>}
-        <div className={styles.result_block}>
+        <div className={styles.result_block} onClick={handleCloseDetailsBlock}>
           <ResultList
             searchResults={searchResults}
             loading={isLoading}
             error={error}
             onItemClick={handleOpenDetailedPage}
           />
-          <Outlet />
+          <Outlet context={contextValue} />
         </div>
       </div>
     </div>

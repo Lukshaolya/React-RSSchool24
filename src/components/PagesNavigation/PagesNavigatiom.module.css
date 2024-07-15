@@ -22,3 +22,9 @@
 .btn:disabled {
   border: solid 3px #0d1107;
 }
+
+.text {
+  color:#97ce4c;
+  font-size: 20px;
+  padding: 0 10px;
+}

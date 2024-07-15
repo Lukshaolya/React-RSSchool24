@@ -7,6 +7,7 @@ const PagesNavigation = ({
   prevPage,
   nextPage,
   currentPage,
+  pagesCount,
   fetchData,
 }: PagesNavigationProps) => {
   console.log('pagination', prevPage, nextPage, currentPage);
@@ -35,6 +36,9 @@ const PagesNavigation = ({
           &#706;
         </button>
       </Link>
+      <p className={styles.text}>
+        {currentPage} of {pagesCount}
+      </p>
       <Link to={`/React-RSSchool24/?page=${pageNumber + 1}`}>
         <button
           onClick={handleChangeNext}

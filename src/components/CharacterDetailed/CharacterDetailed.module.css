@@ -39,3 +39,15 @@
   color: black;
   background: #97ce4c;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 0 auto;
+}
+
+.loader img {
+  width: 100px;
+  height:200px;
+}

@@ -54,5 +54,11 @@ export interface PagesNavigationProps {
   prevPage: string | null;
   nextPage: string | null;
   currentPage: number;
+  pagesCount: number;
   fetchData: (url: string) => void;
+}
+
+export interface ContextType {
+  isOpenonMainPage: number | null;
+  setIsOpenonMainPage: (id: number | null) => void;
 }
