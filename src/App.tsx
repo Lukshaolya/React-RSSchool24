@@ -27,15 +27,12 @@ const router = createBrowserRouter([
     element: <NotFoundPage />,
   },
 ]);
-
-class App extends React.Component {
-  render() {
-    return (
-      <ErrorBoundary>
-        <RouterProvider router={router} />
-      </ErrorBoundary>
-    );
-  }
-}
+const App = () => {
+  return (
+    <ErrorBoundary>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
+  );
+};
 
 export default App;

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-
-import styles from './PagesNavigatiom.module.css';
 import { PagesNavigationProps } from '../../types';
+import styles from './PagesNavigatiom.module.css';
 
 const PagesNavigation = ({
   prevPage,

@@ -62,3 +62,11 @@ export interface ContextType {
   isOpenonMainPage: number | null;
   setIsOpenonMainPage: (id: number | null) => void;
 }
+
+export interface ApiResult {
+  id: number;
+  name: string;
+  url: string;
+  gender: string;
+  status: string;
+}

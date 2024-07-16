@@ -1,12 +1,4 @@
-import { getApiFunc } from './types';
-
-interface ApiResult {
-  id: number;
-  name: string;
-  url: string;
-  gender: string;
-  status: string;
-}
+import { ApiResult, getApiFunc } from './types';
 
 export const getApiData: getApiFunc = async (url: string) => {
   try {
@@ -35,9 +27,7 @@ export const getApiData: getApiFunc = async (url: string) => {
       };
     }
     return null;
-    // return { error: 'No result' };
   } catch (error) {
     console.error('Fetching data failed:', error);
-    // return { error: (error as Error).message };
   }
 };
