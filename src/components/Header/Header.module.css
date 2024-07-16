@@ -1,0 +1,35 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin: 10px 50px;
+    max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header_logo img {
+  width: 180px;
+  height: 120px;
+}
+
+.header_nav_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+
+  list-style-type: none;
+}
+
+.header_nav_block li a {
+  color: #cdce68;;
+  font-size: 25px;
+}
+
+
