@@ -9,7 +9,7 @@
 
 .personal_info {
   color: white;
-  background-color: #2432337d;
+  background-color: var(--theme-default-personalinfo);
   padding: 20px 30px;
   border-radius: 10px;
   box-shadow:

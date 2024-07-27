@@ -5,18 +5,18 @@
 
 .btn {
   height: 30px;
-  color: #97ce4c;
+  color: var(--theme-default-input);
   background: black;
   border-radius: 5px;
   padding: 0 20px;
   margin: 0 10px;
   box-sizing: content-box;
-  border: solid 3px #97ce4c;
+  border: solid 3px var(--theme-default-input);
 }
 
 .btn:hover {
   color: black;
-  background: #97ce4c;
+  background: var(--theme-default-input);
 }
 
 .btn:disabled {
@@ -24,7 +24,7 @@
 }
 
 .text {
-  color:#97ce4c;
+  color:var(--theme-default-input);
   font-size: 20px;
   padding: 0 10px;
 }

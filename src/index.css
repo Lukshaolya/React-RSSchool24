@@ -2,9 +2,23 @@ html {
   margin: 0;
 }
 
+:root {
+  --theme-default-bg: var(--theme-dark-bg);
+  --theme-dark-bg:url(https://i.redd.it/lwwt86ci5anz.jpg);
+  --theme-light-bg: rgb(39, 43, 51);
+
+  --theme-dark-personalinfo: #2432337d;
+  --theme-light-personalinfo: #586560b0;
+  --theme-default-personalinfo: var(--theme-dark-personalinfo);
+
+  --theme-dark-input: #97ce4c;
+  --theme-light-input: #ada7a7;
+  --theme-default-input: var(--theme-dark-input);
+}
+
 body {
-  background-image: url(https://i.redd.it/lwwt86ci5anz.jpg);
-  background-color: black;
+  background: var(--theme-default-bg);
+  /* background-color: rgb(39, 43, 51); */
   background-size: cover;
   background-position: center;
   height: 100vh;

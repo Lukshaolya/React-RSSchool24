@@ -8,7 +8,7 @@ header {
   flex-direction: row;
   gap: 100px;
   margin: 10px 50px;
-    max-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -28,8 +28,44 @@ header {
 }
 
 .header_nav_block li a {
-  color: #cdce68;;
+  color: #cdce68;
   font-size: 25px;
+  font-weight: 800;
 }
 
+.change_theme_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 100px;
+}
 
+.change_theme {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+  font-style: italic;
+  transition: all 0.3s;
+}
+
+.change_theme_light {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+  font-style: italic;
+  background: black;
+  color: #97ce4c;
+  transition: all 0.3s;
+}
+
+.change_theme:hover {
+  background-color: #cdce68;
+  transform: scale(1.1);
+}
+
+.change_theme_light:hover {
+  background-color: #cdce68;
+  transform: scale(1.1);
+}
