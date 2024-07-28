@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { CharactaeDetailData } from '../types';
 
-interface SavedState {
+export interface SavedState {
   items: Array<CharactaeDetailData>;
+  data: [];
 }
 
-const initialState: SavedState = { items: [] };
+const initialState: SavedState = { items: [], data: [] };
 
 const savedSlice = createSlice({
   name: 'saved',

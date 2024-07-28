@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 // import { ApiProvider } from '@reduxjs/toolkit/query/react';
 import App from './App.tsx';
 import './index.css';
-// import { dataApi } from './store/apiSlice.ts';
+// import { dataApi } from './store/apiSlice.js';
 import { store } from './store/store.ts';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

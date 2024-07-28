@@ -10,6 +10,7 @@ import PagesNavigation from '../../components/PagesNavigation/PagesNavigation';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import FlyoutWindow from '../../components/Flyout/Flyout';
+import { useGetAllCharactersQuery } from '../../store/apiSlice';
 import styles from './MainPage.module.css';
 
 const MainPage = () => {
@@ -24,6 +25,8 @@ const MainPage = () => {
   const [pagesCount, setPagesCount] = useState(1);
   const [isOpenonMainPage, setIsOpenonMainPage] = useState<number | null>(null);
   const [isFlyoutOpen, setFlyoutOpen] = useState(false);
+  const { data } = useGetAllCharactersQuery();
+  console.log(data);
 
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
