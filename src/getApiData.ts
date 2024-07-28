@@ -9,7 +9,7 @@ export const getApiData: getApiFunc = async (url: string) => {
 
     const data = await response.json();
     if (data && data.results && data.info) {
-      console.log(data.info);
+      // console.log(data.info);
       return {
         results: data.results.map(
           ({ id, name, url, gender, status }: ApiResult) => ({

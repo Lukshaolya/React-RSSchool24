@@ -9,7 +9,6 @@ const PagesNavigation = ({
   pagesCount,
   fetchData,
 }: PagesNavigationProps) => {
-  console.log('pagination', prevPage, nextPage, currentPage);
   const pageNumber = currentPage;
 
   const handleChangeNext = () => {

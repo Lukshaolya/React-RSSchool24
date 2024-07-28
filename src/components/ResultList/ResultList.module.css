@@ -37,3 +37,19 @@
   width: 200px;
   height: 200px;
 }
+
+
+/* .checked_block {
+position: absolute;
+} */
+
+.checked_block input {
+  height: 20px;
+  width: 20px;
+  background-color: aquamarine;
+}
+
+.checked_block input:checked {
+  color:red;
+  background-color: azure;
+}

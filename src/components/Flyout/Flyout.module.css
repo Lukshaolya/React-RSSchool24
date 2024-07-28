@@ -1,0 +1,73 @@
+.flyout {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+  margin: 20px;
+}
+
+.flyout_container {
+  background: var(--theme-default-input);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: scale(0.6);
+  opacity: 0;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.flyout_container.enter {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.flyout_container.exit {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.flyout_btn_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background: transparent;
+  font-style: italic;
+  transition: 0.6s all;
+}
+
+.flyout_btn_close:hover {
+  font-size: 17px;
+}
+
+.flyout_block_btn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flyout_btn {
+  background-color: #cdce68;
+  border-radius: 10px;
+  border: 2px solid #adae58;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.flyout_btn a {
+  color: black;
+}
+
+.flyout_message {
+  font-size: 20px;
+}

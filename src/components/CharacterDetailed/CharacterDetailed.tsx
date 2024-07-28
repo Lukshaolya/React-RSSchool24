@@ -26,7 +26,7 @@ const CharacterDetailed = () => {
       try {
         const response = await fetch(urlToFetch);
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         setCharacter(data);
       } catch (error) {
         console.error('Error fetching character:', error);

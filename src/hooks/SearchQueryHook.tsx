@@ -12,7 +12,6 @@ const useSearchQuery = (key: string) => {
   useEffect(() => {
     return () => {
       localStorage.setItem(key, inputValue);
-      console.log(inputValue, 'useEffect');
     };
   }, []);
 

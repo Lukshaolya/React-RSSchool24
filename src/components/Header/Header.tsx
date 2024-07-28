@@ -20,7 +20,6 @@ const Header = () => {
         setIcon(LOGO_DARK);
     }
   }, [isTheme]);
-  console.log(isTheme);
   return (
     <div>
       <div className={styles.container}>

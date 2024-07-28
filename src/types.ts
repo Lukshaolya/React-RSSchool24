@@ -23,6 +23,7 @@ export interface ResultListProps {
   loading: boolean;
   error: boolean;
   onItemClick: (id: number) => void;
+  savedStore: Array<CharactaeDetailData>;
 }
 
 export interface SearchBarProps {
@@ -69,4 +70,10 @@ export interface ApiResult {
   url: string;
   gender: string;
   status: string;
+}
+
+export interface FlyoutWindowProps {
+  isOpen: boolean;
+  closeWindow: () => void;
+  store: Array<CharactaeDetailData>;
 }
