@@ -1,0 +1,30 @@
+.pagination_block {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  height: 30px;
+  color: var(--theme-default-input);
+  background: black;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin: 0 10px;
+  box-sizing: content-box;
+  border: solid 3px var(--theme-default-input);
+}
+
+.btn:hover {
+  color: black;
+  background: var(--theme-default-input);
+}
+
+.btn:disabled {
+  border: solid 3px #0d1107;
+}
+
+.text {
+  color:var(--theme-default-input);
+  font-size: 20px;
+  padding: 0 10px;
+}

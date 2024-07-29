@@ -1,0 +1,28 @@
+.search__input {
+  height: 30px;
+  width: 350px;
+  font-size: 20px;
+  padding: 5px 15px;
+  box-sizing: content-box;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: var(--theme-default-input);
+  margin: 0 20px;
+}
+
+.search__btn {
+  height: 30px;
+  width: 100px;
+  color: var(--theme-default-input);
+  background: black;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin: 0 10px;
+  box-sizing: content-box;
+  border: solid 3px var(--theme-default-input);
+}
+
+.search__btn:hover {
+  color: black;
+  background: var(--theme-default-input);
+}

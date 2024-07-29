@@ -1,0 +1,55 @@
+.search_list {
+  margin: 50px 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 10px;
+  color: white;
+}
+
+.personal_info {
+  color: white;
+  background-color: var(--theme-default-personalinfo);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.personal_info li {
+  list-style: lao;
+}
+
+.personal_info h2 {
+  color: #e8ea79;
+  text-align: center;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.loader img {
+  width: 200px;
+  height: 200px;
+}
+
+
+/* .checked_block {
+position: absolute;
+} */
+
+.checked_block input {
+  height: 20px;
+  width: 20px;
+  background-color: aquamarine;
+}
+
+.checked_block input:checked {
+  color:red;
+  background-color: azure;
+}
