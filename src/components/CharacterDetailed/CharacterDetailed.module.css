@@ -1,0 +1,53 @@
+.detailed_block {
+  width: 20%;
+  color: white;
+  margin-top: 100px;
+}
+
+.detailed_block h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.detailed_block h4 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.detailed_block img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.filter_img {
+  filter: grayscale(1);
+}
+
+.detailed_block button {
+  height: 30px;
+  color: #97ce4c;
+  background: black;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin: 0 10px;
+  box-sizing: content-box;
+  border: solid 3px #97ce4c;
+}
+
+.detailed_block button:hover {
+  color: black;
+  background: #97ce4c;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 0 auto;
+}
+
+.loader img {
+  width: 100px;
+  height:200px;
+}

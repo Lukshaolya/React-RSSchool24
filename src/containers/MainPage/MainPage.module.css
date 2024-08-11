@@ -1,0 +1,17 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.interface {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.result_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
